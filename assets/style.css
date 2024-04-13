@@ -23,6 +23,8 @@ body {
 @media only screen and (max-width: 37.5em) {
     /* CSS styles for mobile devices */
     body {
+        display:flex;
+        justify-content: center;
         background-color: var(--Cream);
         padding: 28px 16px;
     }
