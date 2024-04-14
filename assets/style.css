@@ -15,18 +15,20 @@ body {
     font-size: 14px;
 }
 
-.image-container {
-    width: 100%;
-    height: 260px;
-}
+
+
 
 @media only screen and (max-width: 37.5em) {
     /* CSS styles for mobile devices */
     body {
         display:flex;
         justify-content: center;
+        align-items: center;
         background-color: var(--Cream);
-        padding: 28px 16px;
+        height: 100vh;
+        flex: 1; /* Allow flex items to grow and shrink */
+        min-width: 285px; 
+        overflow-x: hidden;
     }
 
     #preview-card {
@@ -35,10 +37,12 @@ body {
         background-color: var(--White);
         max-width: 343px;
         border-radius: 20px;
+        flex: 1; /* Allow flex items to grow and shrink */
+        min-width: 285px; 
 
     }
 
-    .image-container {
+    .image-container-mobile {
         width: 100%;
         height: auto;
         border-top-left-radius: 20px;
@@ -46,6 +50,10 @@ body {
         background-attachment: fixed; /* Keep the background fixed */
 
 
+      }
+
+      .image-container-desktop {
+        display: none;
       }
 
       .card-content {
@@ -141,3 +149,137 @@ body {
         text-decoration: none;
       }
   }
+
+  @media only screen and (min-width: 37.6em) { /*  I learned this */
+    body {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /*  I learned this */
+      background-color: var(--Cream);
+
+  }
+
+  #preview-card {
+      display:flex;
+      flex-direction: row;
+      background-color: var(--White);
+      max-width: 600px;
+      min-width: 285px; 
+      border-radius: 20px;;
+
+  }
+
+  .image-container-desktop {
+      width: 100%;
+      height: 450px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-attachment: fixed; /* Keep the background fixed */
+
+
+    }
+
+    .image-container-mobile {
+      display:none;
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .product-category {
+      color: var(--Aurometal-Saurus, #6C7289);
+      font-family: Montserrat;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 5px;
+      padding: 10px 0 10px 0;
+
+    }
+
+    h1 {
+      color: var(--Gunmetal, #1C232B);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-family: Fraunces;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px; /* 100% */
+      padding: 10px 0 20px 0;
+
+    }
+
+    p {
+      color: var(--Aurometal-Saurus, #6C7289);
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23px; /* 164.286% */
+      padding-bottom: 30px;
+
+    }
+
+    #pricing {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .offer {
+      color: var(--Deep-Aquamarine, #3D8168);
+      font-family: Fraunces;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px; /* 100% */
+      margin-right: 18px;
+    }
+
+    .original-price {
+      color: var(--Aurometal-Saurus, #6C7289);
+      font-family: Montserrat;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23px; /* 176.923% */
+      text-decoration-line: line-through;
+    }
+
+    #add-to-cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+      background: var(--Deep-Aquamarine, #3D8168);
+      transition: background-color 0.3s;
+    }
+
+    #add-to-cart:hover {
+      background-color: var(--deep-aquamarine-hover, #1A4032);
+      cursor: pointer;
+    }
+
+    #add-to-cart img {
+      display: inline-flex;
+      width: 14.385px;
+      height:16px;
+      margin-right: 8px;
+    }
+
+    #add-to-cart a {
+      color: var(--Pure-White, #FFF);
+      /* Button Text */
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+    }
+}
